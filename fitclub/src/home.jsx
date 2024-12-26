@@ -12,7 +12,7 @@ const HomePage = () => {
           MY <span className="star">★</span> FIT
         </Link>
       <nav>
-        <Link to="/reviews" className="active">Отзывы</Link>
+        <Link to="/reviews" className="active">ОТЗЫВЫ</Link>
         <Link to="/login" className="login">ВОЙТИ</Link>
       </nav>
     </header>
@@ -41,10 +41,7 @@ const HomePage = () => {
       </div>
     </main>
       
-      {/* Footer */}
-      <footer className="footer">
-        <p>© 2024 MY FIT. Все права защищены.</p>
-      </footer>
+      
     </div>
   );
 };
