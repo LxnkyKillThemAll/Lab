@@ -17,7 +17,6 @@
     flex-direction: column;
   }
   
-  /* Header */
   .header {
     display: flex;
     justify-content: space-between;
@@ -46,7 +45,6 @@
     color: #FF005E;
   }
   
-  /* Main Content */
   .main-content {
     flex: 1;
     display: flex;
@@ -93,7 +91,6 @@
 
   }
   
-  /* Image Section */
   .content-image {
     flex: 1;
     display: flex;
@@ -106,4 +103,8 @@
     height: auto;
     border-radius: 10px;
   }
+.cta-button:active {
+  opacity: 0.5;
+}
+
   

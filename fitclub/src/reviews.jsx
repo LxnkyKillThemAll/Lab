@@ -18,7 +18,7 @@ const ReviewsPage = () => {
   };
 
   return (
-    <div>
+    <div className="reviews-page">
       <header className="header">
         <Link to="/" className="logo">
           MY <span className="star">★</span> FIT
@@ -31,6 +31,7 @@ const ReviewsPage = () => {
 
       <main className="reviews-content">
         <h1>Отзывы</h1>
+        <p>Мы ценим ваше мнение! Оставьте отзыв и оцените нас.</p>
         <form className="reviews-form" onSubmit={handleSubmit}>
           <div className="star-rating">
             {[1, 2, 3, 4, 5].map((star) => (
@@ -38,6 +39,7 @@ const ReviewsPage = () => {
                 key={star}
                 className={`star ${star <= stars ? 'selected' : ''}`}
                 onClick={() => handleStarClick(star)}
+                role="button"
               >
                 ★
               </span>
