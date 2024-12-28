@@ -1,4 +1,4 @@
-/* Общие настройки */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* Header */
+
 .header {
   display: flex;
   justify-content: space-between;

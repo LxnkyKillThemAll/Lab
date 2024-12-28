@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px; /* Отступы для равномерного распределения */
+    padding: 10px 40px; 
     background-color: white;
   }
   
@@ -22,41 +22,41 @@
     font-size: 36px;
     font-family: 'Inknut Antiqua';
     font-weight: bold;
-    color: #FF005E; /* Розовый текст логотипа */
+    color: #FF005E;
     text-decoration: none;
     display: flex;
     align-items: center;
   }
   
   .starlogo {
-    color: #FFEE00; /* Жёлтая звезда */
-    text-shadow: 0 0 1px #FF005E, 0 0 2px #FF005E; /* Розовая обводка звезды */
+    color: #FFEE00;
+    text-shadow: 0 0 1px #FF005E, 0 0 2px #FF005E;
     margin-left: 5px;
-    margin-right: 5px; /* Небольшое расстояние между текстом и звездой */
+    margin-right: 5px;
   }
   
   nav {
     display: flex;
-    gap: 40px; /* Расстояние между ссылками */
+    gap: 40px;
   }
   
   nav a {
     font-size: 18px;
     font-weight: bold;
-    text-decoration: none; /* Убираем подчеркивание */
-    color: #333333; /* Чёрный текст для всех ссылок по умолчанию */
+    text-decoration: none;
+    color: #333333;
   }
   
   nav a.active {
-    color: #333333 !important; /* Чёрный текст для активной ссылки */
+    color: #333333 !important;
   }
   
   nav a.login {
-    color: #FF005E; /* Розовый цвет для кнопки "ВОЙТИ" */
+    color: #FF005E;
   }
   
   nav a:hover {
-    color: #FF005E; /* Розовый при наведении */
+    color: #FF005E;
   }
   
   
@@ -126,23 +126,23 @@
 
   @media (max-width: 992px) {
     .main-content {
-      flex-direction: column; /* Меняем направление с горизонтального на вертикальное */
-      justify-content: center; /* Центрируем элементы */
-      align-items: center; /* Выравниваем элементы по центру */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   
     .text-section {
-      max-width: 90%; /* Расширяем текстовый блок */
-      text-align: center; /* Центрируем текст */
-      padding: 0 10px; /* Добавляем отступы */
+      max-width: 90%;
+      text-align: center;
+      padding: 0 10px;
     }
   
     .content-image {
-      margin-top: 20px; /* Добавляем отступ сверху для изображения */
+      margin-top: 20px;
     }
   
     .image {
-      max-width: 90%; /* Уменьшаем ширину изображения */
+      max-width: 90%; 
     }
   }
 

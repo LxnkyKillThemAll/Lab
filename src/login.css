@@ -12,8 +12,8 @@ body {
     align-items: center;
     padding: 10px 40px;
     background-color: white;
-    width: 100%; /* Ширина шапки на всю страницу */
-    box-sizing: border-box; /* Учитываем отступы в ширину */
+    width: 100%;
+    box-sizing: border-box;
     position: relative;
   }
 
@@ -22,40 +22,40 @@ body {
   .logo {
     font-size: 36px;
     font-weight: bold;
-    color: #FF005E; /* Розовый текст логотипа */
+    color: #FF005E;
     text-decoration: none;
     display: flex;
     align-items: center;
   }
   
   .starlogo {
-    color: #FFEE00; /* Жёлтая звезда */
-    text-shadow: 0 0 1px #FF005E, 0 0 2px #FF005E; /* Розовая обводка звезды */
-    margin-left: 5px; /* Небольшое расстояние между текстом и звездой */
+    color: #FFEE00;
+    text-shadow: 0 0 1px #FF005E, 0 0 2px #FF005E;
+    margin-left: 5px; 
   }
   
   nav {
     display: flex;
-    gap: 40px; /* Расстояние между ссылками */
+    gap: 40px;
   }
   
   nav a {
     font-size: 18px;
     font-weight: bold;
-    text-decoration: none; /* Убираем подчеркивание */
-    color: #333333; /* Чёрный текст для всех ссылок по умолчанию */
+    text-decoration: none; 
+    color: #333333;
   }
   
   nav a.active {
-    color: #333333 !important; /* Чёрный текст для активной ссылки */
+    color: #333333 !important;
   }
   
   nav a.login {
-    color: #FF005E; /* Розовый цвет для кнопки "ВОЙТИ" */
+    color: #FF005E;
   }
   
   nav a:hover {
-    color: #FF005E; /* Розовый при наведении */
+    color: #FF005E;
   }
   
   .login-content {
@@ -63,7 +63,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    width: 100%; /* Растягиваем блок */
+    width: 100%;
   }
   
   h1 {
@@ -110,6 +110,6 @@ body {
   }
 
   div {
-  max-width: none; /* Сбрасываем ограничение ширины */
-  width: auto; /* Делаем ширину адаптивной */
+  max-width: none;
+  width: auto; 
 }
