@@ -1,5 +1,8 @@
 body {
+    width: 100%;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Arial', sans-serif;
   }
   
@@ -7,23 +10,52 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 40px;
+    background-color: white;
+    width: 100%; /* Ширина шапки на всю страницу */
+    box-sizing: border-box; /* Учитываем отступы в ширину */
+    position: relative;
   }
-  
+
+ 
+
   .logo {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
-    color: #f50057;
-  }
-  
-  .star {
-    color: gold;
-  }
-  
-  .back {
+    color: #FF005E; /* Розовый текст логотипа */
     text-decoration: none;
-    color: #f50057;
+    display: flex;
+    align-items: center;
+  }
+  
+  .starlogo {
+    color: #FFEE00; /* Жёлтая звезда */
+    text-shadow: 0 0 1px #FF005E, 0 0 2px #FF005E; /* Розовая обводка звезды */
+    margin-left: 5px; /* Небольшое расстояние между текстом и звездой */
+  }
+  
+  nav {
+    display: flex;
+    gap: 40px; /* Расстояние между ссылками */
+  }
+  
+  nav a {
     font-size: 18px;
+    font-weight: bold;
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #333333; /* Чёрный текст для всех ссылок по умолчанию */
+  }
+  
+  nav a.active {
+    color: #333333 !important; /* Чёрный текст для активной ссылки */
+  }
+  
+  nav a.login {
+    color: #FF005E; /* Розовый цвет для кнопки "ВОЙТИ" */
+  }
+  
+  nav a:hover {
+    color: #FF005E; /* Розовый при наведении */
   }
   
   .login-content {
@@ -31,6 +63,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    width: 100%; /* Растягиваем блок */
   }
   
   h1 {
@@ -54,16 +87,29 @@ body {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 20px;
-    border: 1px solid #f50057;
+    border: 1px solid #FF005E;
     border-radius: 5px;
   }
   
   .login-button {
-    background-color: #f50057;
+    background: #FF005E;
     color: white;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
+    padding: 12px 20px;
+    border-color: #FF005E !important;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: border-radius 0.3s, background-color 0.3s, transform 0.2s;
   }
+
+  .login-button:hover {
+    border-radius: 2px;
+    background: white;
+    color: #FF005E;
+    transform: scale(1.05);
+  }
+
+  div {
+  max-width: none; /* Сбрасываем ограничение ширины */
+  width: auto; /* Делаем ширину адаптивной */
+}

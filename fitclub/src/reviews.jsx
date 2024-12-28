@@ -5,33 +5,46 @@ import './reviews.css';
 const ReviewsPage = () => {
   const [stars, setStars] = useState(0);
   const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
 
   const handleStarClick = (starCount) => {
     setStars(starCount);
+    setError(''); // Сбрасываем ошибку при выборе звезды
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (stars === 0) {
+      setError('Пожалуйста, выберите количество звёзд.');
+      return;
+    }
+
+    if (message.trim().length < 5) {
+      setError('Отзыв должен содержать не менее 5 символов.');
+      return;
+    }
+
     alert(`Вы оставили ${stars} звёзд и сообщение: "${message}"`);
     setStars(0);
     setMessage('');
+    setError('');
   };
 
   return (
-    <div className="reviews-page">
+    <div className="app">
       <header className="header">
         <Link to="/" className="logo">
-          MY <span className="star">★</span> FIT
+          MY<span className="starlogo">★</span> FIT
         </Link>
         <nav>
-          <Link to="/reviews" className="active">Отзывы</Link>
-          <Link to="/login">Войти</Link>
+          <Link to="/reviews" className="active">ОТЗЫВЫ</Link>
+          <Link to="/login" className="login">ВОЙТИ</Link>
         </nav>
       </header>
 
       <main className="reviews-content">
-        <h1>Отзывы</h1>
-        <p>Мы ценим ваше мнение! Оставьте отзыв и оцените нас.</p>
+        <h1>Оставьте отзыв!</h1>
         <form className="reviews-form" onSubmit={handleSubmit}>
           <div className="star-rating">
             {[1, 2, 3, 4, 5].map((star) => (
@@ -40,6 +53,7 @@ const ReviewsPage = () => {
                 className={`star ${star <= stars ? 'selected' : ''}`}
                 onClick={() => handleStarClick(star)}
                 role="button"
+                aria-label={`${star} звёзд`}
               >
                 ★
               </span>
@@ -51,13 +65,10 @@ const ReviewsPage = () => {
             placeholder="Напишите ваш отзыв..."
             rows="4"
           ></textarea>
+          {error && <p className="error-message">{error}</p>}
           <button type="submit" className="submit-button">Отправить</button>
         </form>
       </main>
-
-      <footer className="footer">
-        <p>&copy; 2023 MY FIT. Все права защищены.</p>
-      </footer>
     </div>
   );
 };

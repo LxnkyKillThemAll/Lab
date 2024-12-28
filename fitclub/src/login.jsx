@@ -4,14 +4,17 @@ import './login.css';
 
 const LoginPage = () => {
   return (
-    <div>
+    <div className='app'>
       <header className="header">
-        <Link to="/" className="logo">
-          MY <span className="star">★</span> FIT
-        </Link>
-        <nav>
-          <Link to="/" className="back">НАЗАД</Link>
-        </nav>
+        
+          <Link to="/" className="logo">
+            MY<span className="starlogo">★</span> FIT
+          </Link>
+          <nav>
+            <Link to="/reviews" className="active">ОТЗЫВЫ</Link>
+            <Link to="/login" className="login">ВОЙТИ</Link>
+          </nav>
+        
       </header>
 
       <main className="login-content">

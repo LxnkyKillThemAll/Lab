@@ -15,7 +15,7 @@ const HomePage = () => {
       {/* Header */}
       <header className="header">
         <Link to="/" className="logo">
-          MY <span className="star">★</span> FIT
+          MY<span className="starlogo">★</span> FIT
         </Link>
         <nav>
           <Link to="/reviews" className="active">ОТЗЫВЫ</Link>

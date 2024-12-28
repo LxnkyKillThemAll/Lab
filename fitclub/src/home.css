@@ -9,41 +9,57 @@
     min-height: 100vh;
   }
   
-  .app {
-    flex: 1;
-    margin: 0 auto;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-  }
-  
+
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 40px; /* Отступы для равномерного распределения */
+    background-color: white;
   }
   
   .logo {
-    font-size: 40px;
+    font-size: 36px;
+    font-family: 'Inknut Antiqua';
     font-weight: bold;
-    color: #FF005E;
+    color: #FF005E; /* Розовый текст логотипа */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
   }
   
-  .star {
-    color: #FFEE00;
-    border: #FF005E;
+  .starlogo {
+    color: #FFEE00; /* Жёлтая звезда */
+    text-shadow: 0 0 1px #FF005E, 0 0 2px #FF005E; /* Розовая обводка звезды */
+    margin-left: 5px;
+    margin-right: 5px; /* Небольшое расстояние между текстом и звездой */
   }
   
-  .active {
-    margin-right: 20px;
+  nav {
+    display: flex;
+    gap: 40px; /* Расстояние между ссылками */
+  }
+  
+  nav a {
     font-size: 18px;
-    color: #333333;
+    font-weight: bold;
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #333333; /* Чёрный текст для всех ссылок по умолчанию */
   }
   
-  .login {
-    color: #FF005E;
+  nav a.active {
+    color: #333333 !important; /* Чёрный текст для активной ссылки */
   }
+  
+  nav a.login {
+    color: #FF005E; /* Розовый цвет для кнопки "ВОЙТИ" */
+  }
+  
+  nav a:hover {
+    color: #FF005E; /* Розовый при наведении */
+  }
+  
+  
   
   .main-content {
     flex: 1;
@@ -58,6 +74,7 @@
   .text-section {
     flex: 1;
     max-width: 50%;
+    padding-left: 16px;
   }
   
   .text-section h1 {
@@ -74,21 +91,22 @@
   }
   
   .cta-button {
-    background-color: #FF005E;
+    background: #FF005E;
     color: white;
-    border: none;
-    padding: 15px 25px;
-    font-size: 18px;
-    cursor: pointer;
+    padding: 12px 20px;
+    border-color: #FF005E;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: border-radius 0.3s, background-color 0.3s, transform 0.2s;
   }
 
-  .cta-button :hover{
-    background-color: white;
-    color: #FF005E;
-    border: #FF005E;
+  .cta-button:hover {
     border-radius: 2px;
-
+    border-color: #FF005E;
+    background: white;
+    color: #FF005E;
+    transform: scale(1.05);
   }
   
   .content-image {
@@ -103,8 +121,7 @@
     height: auto;
     border-radius: 10px;
   }
-.cta-button:active {
-  opacity: 0.5;
-}
+
+
 
   
